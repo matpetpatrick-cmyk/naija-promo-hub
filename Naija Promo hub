@@ -1,0 +1,306 @@
+index.htm.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101827">
+<title>Naija Promo Hub</title>
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #172033;
+  line-height: 1.6;
+}
+
+header {
+  background: #101827;
+  color: white;
+  padding: 20px;
+}
+
+nav {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo { font-size: 21px; font-weight: bold; }
+.logo span { color: #4ade80; }
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  background: #101827;
+  color: white;
+  padding: 48px 20px 60px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 7vw, 48px);
+  line-height: 1.15;
+  margin: 12px 0;
+}
+
+.hero p {
+  color: #d1d9e6;
+  max-width: 540px;
+  margin: 16px auto;
+}
+
+.tag {
+  color: #86efac;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.btn {
+  display: inline-block;
+  border: 0;
+  border-radius: 8px;
+  background: #16a34a;
+  color: white;
+  padding: 12px 18px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 24px 16px;
+}
+
+.notice {
+  background: #fff7d6;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 18px 0;
+}
+
+.filter {
+  border: 1px solid #d5dce6;
+  background: white;
+  padding: 9px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.filter.active {
+  background: #172033;
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e0e6ef;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 14px #17203308;
+}
+
+.emoji { font-size: 36px; }
+
+.status {
+  display: inline-block;
+  background: #dcfce7;
+  color: #166534;
+  padding: 4px 9px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.card h3 { margin-bottom: 5px; }
+.card p { color: #536176; font-size: 14px; }
+
+footer {
+  background: #101827;
+  color: #d1d9e6;
+  text-align: center;
+  padding: 28px 16px;
+  margin-top: 30px;
+}
+
+footer a { color: #86efac; }
+
+dialog {
+  max-width: 420px;
+  width: calc(100% - 32px);
+  border: 0;
+  border-radius: 14px;
+  padding: 24px;
+}
+
+dialog::backdrop { background: #0009; }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Naija <span>Promo Hub</span></div>
+    <a href="#promotions">Promotions ↓</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="tag">WELCOME TO NAIJA PROMO HUB</div>
+  <h1>Discover exciting<br>promotions and prizes.</h1>
+  <p>
+    Explore giveaways, community promotions and competitions.
+    Check the rules and verify every offer before participating.
+  </p>
+  <a class="btn" href="#promotions">Explore Promotions</a>
+</section>
+
+<main>
+  <div class="notice">
+    <strong>Important:</strong> The listings below are sample
+    demonstrations, not real offers. No prizes or payments
+    are being issued through this demo website.
+  </div>
+
+  <section id="promotions">
+    <h2>Explore Promotions</h2>
+    <p>Find a category to explore.</p>
+
+    <div class="filters">
+      <button class="filter active" data-type="all">All</button>
+      <button class="filter" data-type="giveaway">Giveaways</button>
+      <button class="filter" data-type="competition">Competitions</button>
+    </div>
+
+    <div class="grid">
+      <article class="card" data-type="giveaway">
+        <div class="emoji">🎁</div>
+        <span class="status">DEMO ONLY</span>
+        <h3>Community Giveaway</h3>
+        <p>
+          A sample listing showing how a genuine community
+          giveaway could be presented.
+        </p>
+        <button class="btn rules"
+          data-title="Community Giveaway">
+          View Details
+        </button>
+      </article>
+
+      <article class="card" data-type="competition">
+        <div class="emoji">🏆</div>
+        <span class="status">DEMO ONLY</span>
+        <h3>Creative Challenge</h3>
+        <p>
+          A sample creative competition listing with
+          space for eligibility and judging rules.
+        </p>
+        <button class="btn rules"
+          data-title="Creative Challenge">
+          View Details
+        </button>
+      </article>
+
+      <article class="card" data-type="giveaway">
+        <div class="emoji">🌟</div>
+        <span class="status">DEMO ONLY</span>
+        <h3>Creator Appreciation</h3>
+        <p>
+          A sample promotion card for a creator's
+          community appreciation event.
+        </p>
+        <button class="btn rules"
+          data-title="Creator Appreciation">
+          View Details
+        </button>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>Stay Safe Online</h2>
+    <p>
+      Never pay an unexpected fee to unlock a supposed prize.
+      Verify the organizer through established official channels.
+      Never share your banking PIN or OTP.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p><strong>Naija Promo Hub</strong></p>
+  <p>A place to discover promotions responsibly.</p>
+  <p>Contact: replace-with-your-email@example.com</p>
+  <p>Demo website — sample offers only.</p>
+</footer>
+
+<dialog id="details">
+  <h2 id="detailTitle">Promotion Details</h2>
+  <p>
+    This is a demonstration listing, not an active giveaway.
+    A real offer should show its organizer, eligibility,
+    closing date, terms and prize delivery arrangements.
+  </p>
+  <button class="btn" id="closeDialog">Close</button>
+</dialog>
+
+<script>
+const filters = document.querySelectorAll(".filter");
+const cards = document.querySelectorAll(".card");
+
+filters.forEach(button => {
+  button.addEventListener("click", () => {
+    filters.forEach(item => item.classList.remove("active"));
+    button.classList.add("active");
+
+    cards.forEach(card => {
+      card.hidden =
+        button.dataset.type !== "all" &&
+        card.dataset.type !== button.dataset.type;
+    });
+  });
+});
+
+const dialog = document.getElementById("details");
+
+document.querySelectorAll(".rules").forEach(button => {
+  button.addEventListener("click", () => {
+    document.getElementById("detailTitle").textContent =
+      button.dataset.title;
+    dialog.showModal();
+  });
+});
+
+document.getElementById("closeDialog").addEventListener("click", () => {
+  dialog.close();
+});
+</script>
+
+</body>
+</html>
